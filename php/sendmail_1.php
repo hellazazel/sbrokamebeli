@@ -10,10 +10,10 @@ $mail = new PHPMailer(true);
 try {
     // Настройки SMTP
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';// mail.hostland.ru
+    $mail->Host = 'mail.hostland.ru';
     $mail->SMTPAuth = true;
-    $mail->Username = 'sborkamebelisaintp@gmail.com'; // host1853434  host1853434@sborkamebelispb.ru
-    $mail->Password = 'njho bwus cfnf vppy';//ZpCQEhg5rk
+    $mail->Username = 'host1853434@sborkamebelispb.ru'; // host1853434
+    $mail->Password = 'ZpCQEhg5rk';
     $mail->Port = 587;
   	$mail->CharSet = 'UTF-8';
 
@@ -21,7 +21,8 @@ try {
     $mail->setFrom('host1853434@sborkamebelispb.ru', 'host1853434@sborkamebelispb.ru');
 
     // Получатель
-    $mail->addAddress('sborkamebelisaintp@gmail.com', 'Имя получателя');
+    $mail->addAddress('sborkamebelispb97@yandex.ru
+    ', 'Имя получателя');
 
     // Тема письма
     $mail->Subject = 'Новая заявка';

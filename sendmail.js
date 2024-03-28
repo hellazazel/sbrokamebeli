@@ -74,8 +74,6 @@ $(document).ready(function() {
       },
       error: function(xhr, status, error) {
         // Обработка ошибки
-        console.log(status)
-        console.log(error)
       }
     });
     }
@@ -144,8 +142,6 @@ $(document).ready(function() {
       },
       error: function(xhr, status, error) {
         // Обработка ошибки
-        console.log(status)
-        console.log(error)
       }
     });
   });
