@@ -21,7 +21,7 @@ try {
     $mail->setFrom('host1853434@sborkamebelispb.ru', 'host1853434@sborkamebelispb.ru');
 
     // Получатель
-    $mail->addAddress('sborkamebelisaintp@gmail.com', 'Имя получателя');
+    $mail->addAddress('sborkamebelispb97@yandex.ru', 'Имя получателя');
 
     // Тема письма
     $mail->Subject = 'Новая заявка';
