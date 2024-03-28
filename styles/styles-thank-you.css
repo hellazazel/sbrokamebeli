@@ -1,0 +1,53 @@
+
+@font-face {
+  font-family: "Blogger_Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Blogger_Sans.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blogger_Sans-Medium";
+  font-style: Medium;
+  font-weight: 400;
+  src: url("/fonts/Blogger_Sans-Medium.woff") format("woff");
+  font-display: swap;
+  }
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  max-width: 100vw;
+  margin-bottom: 25px;
+  padding: 0;
+  /* justify-content: center; */
+}
+
+.tittle-box {
+  font-family: "Blogger_Sans-medium";
+  font-size:  25px;
+  text-align: center;
+  border: 2px dashed #3D3D44;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 0 15px 25px;
+  flex-grow: 1;
+  background-color: #ffffff;
+  color: #3D3D44;
+}
+
+
+.tittle-box--discription {
+  margin: 25px 0;
+}
+
+.container_img {
+width: 1920px;
+height: 1080px;
+border-radius: 20px;
+
+}

@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Neue_soviet";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Neue_soviet.woff") format("woff");
+  font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Blogger_Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/Blogger_Sans.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Blogger_Sans-Medium";
+    font-style: Medium;
+    font-weight: 400;
+    src: url("/fonts/Blogger_Sans-Medium.woff") format("woff");
+    font-display: swap;
+    }
+
+  @font-face {
+    font-family: "Blogger_Sans-Light";
+    font-style: Light;
+    font-weight: 400;
+    src: url("/fonts/Blogger_Sans-Light.woff") format("woff");
+    font-display: swap;
+    }
+
+  @font-face {
+    font-family: "Blogger_Sans-Bold";
+    font-style: Bold;
+    font-weight: 400;
+    src: url("/fonts/Blogger_Sans-Bold.woff") format("woff");
+    font-display: swap;
+    }
+
+    main {
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+    .main-conteiner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .colloboration-tittle{
+      font-family: "Neue_soviet";
+      color: #C9645D;
+      font-size: 75px;
+      font-weight: 400;
+      line-height: 80%;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 29px;
+    }
+
+    .colloboration-discription {
+      font-family: "Blogger_sans-medium";
+      font-size: 25px;
+      font-weight: 400px;
+      line-height: 80%;
+      padding: 5px;
+      text-align: center;
+      width: fit-content;
+      color: #343434;
+      margin-bottom: 25px;
+      width: 90%;
+      border: 2px dashed #343434;
+      border-radius: 25px;
+      padding: 10px;
+    }
+
+    .colloboration-img-box {
+      height: fit-content;
+    }
+    
+    .colloboration-img {
+      border-radius: 30px;
+      width: max(90vw, 360px);
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.2s;
+    }
+    .colloboration-img:hover {
+      height: fit-content;
+      transition: 0.2s;
+      box-shadow: 10px 8px 5px #3f4143ac;
+      transform: scale(1.01);
+    }
+    
+
+  .button {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: fit-content;
+  padding: 10px 20px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #343434;
+  border-radius: 10px;
+  text-align: center;
+ align-self: center;
+}
+
+.button:hover {
+  font-family: "Blogger_sans";
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  background-color: #116FFF;
+  color: #ffffff;
+}
+
+.colloboration-button {
+  display: block;
+  font-family: "Blogger_sans";
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

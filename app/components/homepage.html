@@ -1,0 +1,45 @@
+<main class="homepage">
+  <div class="homepage__container">
+    <div class="homepage__wrapper">
+      <h1 class="homepage__title">
+        Сборка мебели и кухонных гарнитуров <span>на дому</span>
+      </h1>
+    </div>
+    <form action class="homepage__form">
+      <h2 class="homepage__subtittle">Форма обратной связи</h2>
+      <div class="homepage__item">
+        <label for="homepage__name" class="homepage__label">Ваше имя*</label>
+        <input type="text" id="homepage__name" class="homepage__input" name="user__name"
+          placeholder="Фамилия Имя Отчество" onkeydown="noDigits(event)" />
+      </div>
+      <div class="homepage__item">
+        <label for="homepage__tel" class="homepage__label">Номер
+          телефона*</label>
+        <input type="tel" minlength="12" maxlength="12" id="homepage__tel" class="homepage__input" name="user__tel"
+          placeholder="+7-(___)-___-__-__" onfocus="addDefaultValue(this)" onblur="removeDefaultValue(this)" />
+      </div>
+      <div class="homepage__item">
+        <label for="homepage__question" class="homepage__label">Сообщение</label>
+        <textarea id="homepage__question" class="homepage__input homepage__textarea" name="user__question"
+          placeholder="Напишите интересующий вас вопрос"></textarea>
+      </div>
+      <div class="homepage__item">
+        <label for="homepage__file" class="homepage__label homepage__label-file">
+          <img src="app/images/src/homepage/peg.svg" alt="скрепка" class="homepage__label-image" /><br />
+          <span class="homepage__label-clue">Перетащите файл(ы) в эту
+            область</span><br />
+          <span class="homepage__label-hook">или вы можете выбрать
+            файл</span><br />
+          <span class="homepage__label-button">кликнув сюда</span><br />
+        </label>
+        <input type="file" id="homepage__file" class="homepage__input" name="user__file"
+          placeholder="Перетащите файл(ы) в эту область" />
+      </div>
+      <p class="homepage__promt">
+        (прикрепите схему или фото мебели в готовом виде)
+      </p>
+      <a href class="homepage__button button" type="submit">Рассчитать
+        стоимость</a>
+    </form>
+  </div>
+</main>

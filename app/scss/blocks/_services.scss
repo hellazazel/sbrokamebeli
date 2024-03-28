@@ -1,0 +1,197 @@
+.services  {
+    padding: 30px $padding-mobile;
+}
+.services__container {
+    @media (min-width: $desktop-width) {
+        width: 1260px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.services__title {
+    color: $grey;
+    font-family: $Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 80%;
+    width: 84px;
+    margin: 0 auto 38px auto;
+    @media (min-width: $desktop-width) {
+        font-size: 85px;
+        width: 296px;
+        margin-bottom: 100px;
+    }
+}
+.services__subtitle {
+    color: $grey;
+    font-family: $Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 123.5%;
+    width: 340px;
+    margin: 0 auto 104px auto;
+    @media (min-width: $desktop-width) {
+        font-size: 55px;
+        width: 493px;
+        margin: 0;
+        position: relative;
+    }
+}
+.services__subtitle::after {
+    @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 242px;
+    right:70px;
+    content: url('../images/src/services/thumb-up.png');
+    }
+}
+.services__image {
+    width: 340px;
+    margin: 0 auto;
+    @media (min-width: $desktop-width) {
+        width: 727px;
+        margin: 0;
+    }
+}
+.services__wrapper {
+    width: 340px;
+    margin: 0 auto;
+    position: relative;
+    @media (min-width: $desktop-width) {
+        width: 727px;
+        margin: 125px 0 0 0;
+    }
+}
+.services__item {
+    color: $black;
+    text-align: center;
+    font-family: $Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 86.5%;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    @media (min-width: $desktop-width) {
+        font-size: 33px;
+    }
+}
+
+@keyframes slideFromLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+.services__item:nth-child(1) {
+    top: -50px;
+    left: -10px;
+    @media (min-width: $desktop-width) {
+        top: -101px;
+        left: 20px;
+    }
+}
+.services__item:nth-child(1)::after {
+    position: absolute;
+    top: 17px;
+    left: 64px;
+    content: url('../images/src/services/line1.svg');
+    @media (min-width: $desktop-width) {
+        content: url('../images/src/services/line1d.svg');
+        top: 45px;
+        left: 130px;
+    }
+}
+.services__item:nth-child(2) {
+    top: -74px;
+    left: 150px;
+    width: 83px;
+    @media (min-width: $desktop-width) {
+        top: -146px;
+        left: 321px;
+        width: 172px;
+    }
+}
+.services__item:nth-child(2)::after {
+    position: absolute;
+    top: 33px;
+    left: 72px;
+    content: url('../images/src/services/line2.svg');
+    @media (min-width: $desktop-width) {
+        content: url('../images/src/services/line2d.svg');
+        top: 63px;
+        left: 145px;
+    }
+}
+.services__item:nth-child(3) {
+    top: -25px;
+    left: 270px;
+    @media (min-width: $desktop-width) {
+        top: -50px;
+        left: 571px;
+    }
+}
+.services__item:nth-child(3)::after {
+    position: absolute;
+    top: 18px;
+    left: -12px;
+    content: url('../images/src/services/line3.svg');
+    @media (min-width: $desktop-width) {
+        content: url('../images/src/services/line3d.svg');
+        top: 34px;
+        left: -40px;
+    }
+}
+.services__item:nth-child(4) {
+    top: 120px;
+    left: -14px;
+    @media (min-width: $desktop-width) {
+        top: 230px;
+        left: -60px;
+    }
+}
+.services__item:nth-child(4)::after {
+    position: absolute;
+    top: -41px;
+    left: 32px;
+    content: url('../images/src/services/line4.svg');
+    @media (min-width: $desktop-width) {
+        content: url('../images/src/services/line4d.svg');
+        top: -73px;
+        left: 80px;
+    }
+}
+.services__item:nth-child(5) {
+    bottom: -11px;
+    left: -10px;
+}
+.services__item:nth-child(5)::after {
+    position: absolute;
+    top: -75px;
+    left: 98px;
+    content: url('../images/src/services/line5.svg');
+    @media (min-width: $desktop-width) {
+        content: url('../images/src/services/line5d.svg');
+        top: -155px;
+        left: 160px;
+    }
+}
+.services__item:nth-child(6) {
+    bottom: -29px;
+    right: 20px;
+}
+.services__item:nth-child(6)::after {
+    position: absolute;
+    top: -96px;
+    left: 13px;
+    content: url('../images/src/services/line6.svg');
+    @media (min-width: $desktop-width) {
+        content: url('../images/src/services/line6d.svg');
+        top: -205px;
+        left: -10px;
+    }
+}

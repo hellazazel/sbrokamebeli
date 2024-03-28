@@ -1,0 +1,209 @@
+.price {
+  min-width: 340px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 $padding-mobile;
+  @media (min-width: $desktop-width) {
+    max-width: 1260px;
+    padding: 0;
+  }
+}
+.price__title {
+  color: $grey;
+  font-family: $Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 80%;
+  width: 270px;
+  margin: 0 auto 20px auto;
+  @media (min-width: $desktop-width) {
+    font-size: 85px;
+    width: 925px;
+    margin: 0 auto 35px auto;
+  }
+}
+.price__kitchen {
+  background-image: url("../images/src/price/kitchen.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 340px;
+  max-width: 780px;
+  height: 320px;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #4e6b95;
+  @media (min-width: $desktop-width) {
+    width: 620px;
+    height: 600px;
+    border-radius: 10px;
+    background-image: url("../images/src/price/kitchen-d.png");
+  }
+}
+.price__kitchen-title {
+  color: $white;
+  text-align: center;
+  font-family: $Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 80%;
+  margin: auto;
+  width: 340px;
+  height: 320px;
+  padding: 150px 32px;
+  border-radius: 5px;
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
+    width: 620px;
+    height: 600px;
+    padding: 285px 62px;
+    border-radius: 10px;
+  }
+}
+.price__furniture {
+  background-image: url("../images/src/price/furniture.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 340px;
+  max-width: 780px;
+  height: 340px;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #705858;
+  @media (min-width: $desktop-width) {
+    width: 620px;
+    height: 600px;
+    border-radius: 10px;
+    background-image: url("../images/src/price/furniture-d.png");
+  }
+}
+.price__furniture-title {
+  color: $white;
+  text-align: center;
+  font-family: $Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 80%;
+  margin: auto;
+  width: 340px;
+  height: 320px;
+  padding: 150px 32px;
+  border-radius: 5px;
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
+    width: 620px;
+    height: 600px;
+    padding: 276px 60px;
+    border-radius: 10px;
+  }
+}
+.price__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 1260px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+.price__kitchen-title:hover,
+.price__furniture-title:hover {
+  color: $yellow;
+}
+.price__wrapper-modal-kitchen {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $white;
+}
+.price__wrapper-modal-furniture {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $white;
+}
+.modal-content-kitchen {
+  position: relative;
+  background-color: $white;
+  padding: 0 15px;
+  width: 100%;
+  z-index: 11;
+  @media (min-width: $desktop-width) {
+    padding: 40px;
+  }
+}
+.price__close-kitchen {
+  background-image: url("/app/images/src/price/Close_v4.svg");
+  background-size: cover;
+  background-color: $white;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 17px;
+  cursor: pointer;
+  z-index: 11;
+  border-radius: 50px;
+  @media (min-width: $desktop-width) {
+    width: 40px;
+    height: 40px;
+    top: 35px;
+    right: 63px;
+  }
+}
+.modal-content-furniture {
+  position: relative;
+  background-color: $white;
+  padding: 0 15px;
+  width: 100%;
+  z-index: 11;
+  @media (min-width: $desktop-width) {
+    padding: 40px;
+  }
+}
+.price__close-furniture {
+  background-image: url("/app/images/src/price/Close_v4.svg");
+  background-size: cover;
+  background-color: $white;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50px;
+  @media (min-width: $desktop-width) {
+    width: 40px;
+    height: 40px;
+    right: 60px;
+    top: 33px;
+  }
+}
+iframe {
+  width: 200%;
+  height: 200vh;
+  border: none;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    height: 100vh;
+    transform: none;
+  }
+}

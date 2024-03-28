@@ -1,0 +1,31 @@
+.reviews__title {
+        color: $grey;
+        text-align: center;
+        font-family: $Raleway;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 80%;
+        margin: 30px auto;
+        @media (min-width: $desktop-width) {
+            font-size: 85px;
+            margin: 90px auto;
+        }
+    }
+.reviews__container {
+    min-width: 340px;
+    max-width: 780px;
+    margin: 0 auto;
+    @media (min-width: $desktop-width) {
+        max-width: 1260px;
+    }
+}
+.sw-app-body {
+    @media (min-width: $desktop-width) {
+        width: 1260px !important;
+    }
+    
+}
+.sw-review-bottom a {
+    background-color: $yellow !important;
+}

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Neue soviet";
+  src: url("/app/fonts/Neue_soviet.ttf");
+}
+@font-face {
+  font-family: "Blogger Sans";
+  src: url("/app/fonts/Blogger_Sans.otf");
+}
+@font-face {
+  font-family: "Bebas_Neue";
+  src: url("/app/fonts/Bebas_Neue.ttf");
+}
+
+ul {
+  list-style: inside;
+  font-family: "Inter";
+  margin-top: 20px;
+}
+ol {
+  list-style: decimal;
+  font-family: "Inter";
+  margin-top: 20px;
+}
+
+body {
+  height: fit-content;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  max-width: 70vw;
+  @media (min-width: 1440px) {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+}
+
+.link {
+  font-family: "Inter";
+  font-size: 0.7rem;
+  color: #777777;
+  @media (min-width: 1440px) {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway";
+  font-weight: 900;
+  margin-top: 20px;
+  @media (min-width: 1440px) {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+}
+
+a {
+  color: rgb(71, 71, 71);
+}
+
+a:link {
+  color: rgb(71, 71, 71);
+}
+
+a:active {
+  color: rgb(71, 71, 71);
+}
+
+p span {
+  font-weight: 700;
+}
+
+p {
+  margin-top: 20px;
+  font-family: "Inter";
+  @media (min-width: 1440px) {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+}
+
+img {
+  max-width: 50vw;
+  margin-top: 20px;
+  @media (min-width: 1440px) {
+    margin-top: 40px;
+  }
+}
+
+.img_zazor {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.img_zazor img {
+  width: 33vw;
+  margin-right: 20px;
+  @media (max-width: 667px) {
+    max-width: 72vw;
+  }
+}
