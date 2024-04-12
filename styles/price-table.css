@@ -38,6 +38,30 @@
   font-display: swap;
 }
 
+.close-page {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 15px;
+  padding-bottom: 15px;
+  }
+  
+  .class-page__img {
+  width: 40px;
+  height: 40px;
+  }
+  
+  .class-page__link {
+    display: flex;
+    font-family: "Blogger Sans";
+    font-size: 15px;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    text-decoration: none;
+    
+  }
+  
+
 .table-back {
   display: flex;
   flex-direction: row;
