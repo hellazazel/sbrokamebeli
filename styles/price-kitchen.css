@@ -38,29 +38,6 @@
   font-display: swap;
 }
 
-.close-page {
-display: flex;
-flex-direction: row-reverse;
-margin: 0 15px;
-padding-bottom: 15px;
-}
-
-.class-page__img {
-width: 40px;
-height: 40px;
-}
-
-.class-page__link {
-  display: flex;
-  font-family: "Blogger Sans";
-  font-size: 15px;
-  align-items: center;
-  gap: 10px;
-  color: black;
-  text-decoration: none;
-  
-}
-
 .table-back {
   display: flex;
   flex-direction: row;
@@ -83,7 +60,7 @@ height: 40px;
 
 table {
   font-family: "Blogger Sans";
-  font-size: 1em;
+  font-size: 15px;
   border-collapse: collapse;
   border-radius: 25px;
   margin-left: auto;
@@ -100,7 +77,7 @@ tr {
 
 th {
   font-family: "Blogger Sans";
-  font-size: 1em;
+  font-size: 20px;
   padding-left: 10px;
 }
 
@@ -120,8 +97,9 @@ tr:nth-child(odd) {
   text-align: center;
 }
 .thead-border-top {
+  padding-top: 30px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -132,7 +110,7 @@ tr:nth-child(odd) {
 .border-table {
   border: 2px solid black;
   border-radius: 25px;
-  padding: 15px;
+  padding: 25px;
   margin: 0 15px;
   margin-bottom: 20px;
 }
@@ -141,5 +119,5 @@ tr:nth-child(odd) {
   display: none;
 }
 
-/* .td-module:hover {
-} */
+.td-module:hover {
+}
