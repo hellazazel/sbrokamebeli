@@ -104,6 +104,10 @@ th {
   padding-left: 10px;
 }
 
+.right_align {
+  text-align: right;
+}
+
 tr:nth-child(even) {
   background-color: #009dff16;
   border-top: 1px solid rgba(63, 153, 191, 0.337);
@@ -119,10 +123,22 @@ tr:nth-child(odd) {
   font-size: 25px;
   text-align: center;
 }
+
+@media (max-width: 570px) {
+  .thead-border-top-up {
+  font-size: 10px;
+}
+}
+
 .thead-border-top {
   padding-bottom: 10px;
   font-size: 20px;
   text-align: center;
+}
+@media (max-width: 570px) {
+.thead-border-top {
+  font-size: 10px;
+}
 }
 
 .td-1 {
