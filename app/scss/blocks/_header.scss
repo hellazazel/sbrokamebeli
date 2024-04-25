@@ -21,6 +21,7 @@
   justify-content: space-between;
   width: 100%;
 }
+
 .header__navigation {
   display: flex;
   align-items: center;
@@ -128,6 +129,7 @@
   right: 10px;
   top: 28px;
   background-color: $grey;
+  border: solid 1px white;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
@@ -163,4 +165,29 @@
   @media (min-width: $desktop-width) {
     margin: 0 0 0 20px;
   }
+}
+
+.header__burger-wrapper-button {
+display: flex;
+flex-direction: row;
+background-color: $white;
+border-radius: 5px;
+align-items: center;
+}
+
+.header__burger-icon {
+width: 35px;
+height: auto;
+padding: 5px;
+transition: 0.6;
+}
+
+.header__burger-icon:hover {
+transition: 0.6;
+opacity: 0.8;
+}
+
+.header__burger-icon-telegram {
+  width: 40px;
+  height: auto;
 }
