@@ -6,3 +6,4 @@ import './works.js';
 import './faq.js';
 import './form.js';
 import './validation.js';
+import './cockies-close.js';
