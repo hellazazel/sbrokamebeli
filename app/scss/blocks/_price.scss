@@ -3,11 +3,13 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 0 $padding-mobile;
+
   @media (min-width: $desktop-width) {
     max-width: 1260px;
     padding: 0;
   }
 }
+
 .price__title {
   color: $grey;
   font-family: $Raleway;
@@ -17,12 +19,14 @@
   line-height: 80%;
   width: 270px;
   margin: 0 auto 20px auto;
+
   @media (min-width: $desktop-width) {
     font-size: 85px;
     width: 925px;
     margin: 0 auto 35px auto;
   }
 }
+
 .price__kitchen {
   background-image: url("../images/src/price/kitchen.png");
   background-repeat: no-repeat;
@@ -34,6 +38,7 @@
   display: flex;
   margin-bottom: 20px;
   background-color: #4e6b95;
+
   @media (min-width: $desktop-width) {
     width: 620px;
     height: 600px;
@@ -41,6 +46,7 @@
     background-image: url("../images/src/price/kitchen-d.png");
   }
 }
+
 .price__kitchen-title {
   color: $white;
   text-align: center;
@@ -54,6 +60,8 @@
   height: 320px;
   padding: 150px 32px;
   border-radius: 5px;
+  transition: 0.3s;
+
   @media (min-width: $desktop-width) {
     font-size: 36px;
     width: 620px;
@@ -62,6 +70,7 @@
     border-radius: 10px;
   }
 }
+
 .price__furniture {
   background-image: url("../images/src/price/furniture.png");
   background-repeat: no-repeat;
@@ -73,6 +82,7 @@
   display: flex;
   margin-bottom: 20px;
   background-color: #705858;
+
   @media (min-width: $desktop-width) {
     width: 620px;
     height: 600px;
@@ -80,6 +90,7 @@
     background-image: url("../images/src/price/furniture-d.png");
   }
 }
+
 .price__furniture-title {
   color: $white;
   text-align: center;
@@ -93,6 +104,8 @@
   height: 320px;
   padding: 150px 32px;
   border-radius: 5px;
+  transition: 0.3s;
+
   @media (min-width: $desktop-width) {
     font-size: 36px;
     width: 620px;
@@ -101,6 +114,7 @@
     border-radius: 10px;
   }
 }
+
 .price__container {
   @media (min-width: $desktop-width) {
     display: flex;
@@ -109,10 +123,14 @@
     justify-content: space-between;
   }
 }
+
 .price__kitchen-title:hover,
 .price__furniture-title:hover {
   color: $yellow;
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
 .price__wrapper-modal-kitchen {
   display: none;
   position: fixed;
@@ -124,6 +142,7 @@
   overflow: auto;
   background-color: $white;
 }
+
 .price__wrapper-modal-furniture {
   display: none;
   position: fixed;
@@ -135,16 +154,19 @@
   overflow: auto;
   background-color: $white;
 }
+
 .modal-content-kitchen {
   position: relative;
   background-color: $white;
   padding: 0 15px;
   width: 100%;
   z-index: 11;
+
   @media (min-width: $desktop-width) {
     padding: 40px;
   }
 }
+
 .price__close-kitchen {
   background-image: url("/app/images/src/price/Close_v4.svg");
   background-size: cover;
@@ -158,6 +180,7 @@
   cursor: pointer;
   z-index: 11;
   border-radius: 50px;
+
   @media (min-width: $desktop-width) {
     width: 40px;
     height: 40px;
@@ -165,16 +188,19 @@
     right: 63px;
   }
 }
+
 .modal-content-furniture {
   position: relative;
   background-color: $white;
   padding: 0 15px;
   width: 100%;
   z-index: 11;
+
   @media (min-width: $desktop-width) {
     padding: 40px;
   }
 }
+
 .price__close-furniture {
   background-image: url("/app/images/src/price/Close_v4.svg");
   background-size: cover;
@@ -188,6 +214,7 @@
   cursor: pointer;
   z-index: 2;
   border-radius: 50px;
+
   @media (min-width: $desktop-width) {
     width: 40px;
     height: 40px;
@@ -195,12 +222,14 @@
     top: 33px;
   }
 }
+
 iframe {
   width: 200%;
   height: 200vh;
   border: none;
   transform: scale(0.5);
   transform-origin: 0 0;
+
   @media (min-width: $desktop-width) {
     width: 100%;
     height: 100vh;
