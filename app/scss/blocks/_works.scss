@@ -1,6 +1,7 @@
 .works {
   padding: 10px $padding-mobile;
 }
+
 .works__title {
   color: $grey;
   text-align: center;
@@ -10,32 +11,39 @@
   font-weight: 900;
   line-height: 80%;
   margin: 40px auto 20px auto;
+
   @media (min-width: $desktop-width) {
     font-size: 85px;
     margin: 40px auto;
   }
 }
+
 .works__container {
   min-width: 340px;
   max-width: 780px;
   margin: 0 auto;
+
   @media (min-width: $desktop-width) {
     max-width: 1260px;
   }
 }
+
 .works__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .works__item {
   margin: 0 3px 3px 0;
   cursor: pointer;
   transition: 0.5s;
 }
+
 .works__item:hover {
   transform: scale(1.2);
 }
+
 .works__item:nth-child(3) img,
 .works__item:nth-child(4) img,
 .works__item:nth-child(7) img,
@@ -46,14 +54,19 @@
 .works__item:nth-child(15) img,
 .works__item:nth-child(18) img,
 .works__item:nth-child(20) img,
-.works__item:nth-child(21) img {
-  max-width: 112px;
-  max-height: 84px;
+.works__item:nth-child(21) img,
+.works__item:nth-child(22) img {
+  max-width: auto;
+  height: 80px;
+  // max-height: 84px;
+
   @media (min-width: $desktop-width) {
-    max-width: 377px;
-    max-height: 284px;
+    max-width: auto;
+    height: 280px;
+    // max-height: 284px;
   }
 }
+
 .works__item:nth-child(1) img,
 .works__item:nth-child(2) img,
 .works__item:nth-child(5) img,
@@ -64,13 +77,25 @@
 .works__item:nth-child(16) img,
 .works__item:nth-child(17) img,
 .works__item:nth-child(19) img {
-  max-width: 84px;
-  max-height: 84px;
+  max-width: auto;
+  height: 84px;
+  // max-height: 84px;
+
   @media (min-width: $desktop-width) {
-    max-width: 284px;
-    max-height: 284px;
+    max-width: auto;
+    height: 280px;
+    // max-height: 284px;
   }
 }
+
+img {
+  border-radius: 5px;
+
+  @media (min-width: $desktop-width) {
+    border-radius: 15px;
+  }
+}
+
 .works__modal {
   display: none;
   position: fixed;
@@ -83,14 +108,15 @@
 }
 
 #modalImage {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80%;
+  max-height: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
 }
+
 .button-close {
   position: absolute;
   top: 30px;
