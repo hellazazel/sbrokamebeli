@@ -1,21 +1,27 @@
+@font-face {
+  font-family: "Blogger Sans";
+  src: url("/app/fonts/Blogger_Sans.otf");
+}
+
 * {
   box-sizing: border-box;
+  font-family: "Blogger Sans";
 }
 
 body {
   margin: 0;
-  font-family: sans-serif;
 }
 
 .form {
-  width: 500px;
-  max-width: 100%;
+  max-width: 80vw;
   margin: auto;
   margin-top: 30px;
+  margin-bottom: 50px;
   padding: 20px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
   position: relative;
   background: rgba(255, 255, 255, 0.97);
+  border-radius: 15px;
 }
 
 .imgLogo {
@@ -87,8 +93,15 @@ body {
   border: none;
   border-radius: 20px;
   display: block;
-  width: 50%;
-  font-size: 1, 3em;
+  max-width: 60%;
+  height: 50px;
+  font-size: 1em;
+}
+
+@media (max-width: 447px) {
+  .form__submit {
+    font-size: 0.9em;
+  }
 }
 
 /*Выровняйте поля формы (входы и кнопку "Отправить в WhatsApp", которая также является входом).*/
@@ -106,7 +119,7 @@ body {
 /* ответ формы */
 #response {
   width: 100%;
-  height: 50px;
+  height: 0px;
   margin: 5px;
   padding: 5px;
 }
@@ -123,5 +136,5 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto
+  margin: 0 auto;
 }
