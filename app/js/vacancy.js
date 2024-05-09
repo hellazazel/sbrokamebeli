@@ -2,7 +2,7 @@ document.querySelector("#submit").addEventListener("click", (e) => {
   e.preventDefault();
 
   //ВВЕДИТЕ ДЕЙСТВУЮЩИЙ НОМЕР WHATSAPP:
-  const phone__number = "+7-921-978-61-59";
+  const phone__number = "+7-951-146-41-96";
 
   const master = document.querySelector("#master").value; // переменная
   const old = document.querySelector("#old").value;
@@ -19,7 +19,7 @@ document.querySelector("#submit").addEventListener("click", (e) => {
   %0A*Как вас зовут ?*%0A${master}
   %0A*Сколько вам лет*%0A ${old}
   %0A*У вас есть автомобиль*%0A ${car}
-  %0A*Ваш опыт работы ${experience}
+  %0A*Ваш опыт работы*%0A${experience}
   %0A*Желаемая зарплата*%0A ${cash}`;
 
   if (master === "" || old === "" || car === "" || experience === "") {
