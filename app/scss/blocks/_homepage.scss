@@ -304,7 +304,8 @@ input[type=number] {
     font-style: normal;
     font-weight: 700;
     line-height: 13.854px;
-    transition: box-shadow 0.5s;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0 0 5px #FD5F2F;
 
     @media (min-width: $desktop-width) {
         width: 290px;
@@ -313,23 +314,9 @@ input[type=number] {
     }
 
     &:hover {
-        box-shadow: 0 0 10px #FD5F2F;
-        transition: animation box-shadow 0.5s;
-        animation: wiggle 0.5s ease-in-out infinite;
-    }
-}
-
-@keyframes wiggle {
-    0% {
-        transform: rotate(-0.5deg);
-    }
-
-    50% {
-        transform: rotate(0.5deg);
-    }
-
-    100% {
-        transform: rotate(-0.5deg);
+        box-shadow: 0 0 20px #FD5F2F;
+        transition: transform 0.5s, box-shadow 0.5s;
+        transform: scale(1.02);
     }
 }
 

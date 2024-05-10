@@ -173,20 +173,38 @@
   }
 }
 
+@keyframes wiggle {
+  0% {
+    transform: rotate(-0.5deg);
+  }
+
+  50% {
+    transform: rotate(0.5deg);
+  }
+
+  100% {
+    transform: rotate(-0.5deg);
+  }
+}
+
 .header__burger-link--master {
   background-color: $white;
   color: $black;
   padding: 5px 10px;
   border-radius: 5px;
+  box-shadow: 0 0 15px $white ;
+  transition: background-color 0.5s;
 }
 
 .header__burger-link--master:hover {
-  opacity: 0.8;
   color: $black;
+  transition: background-color box-shadow 3s;
 }
+
 
 .header__burger-item--master {
   margin-top: 18px;
+  animation: wiggle 0.5s ease-in-out infinite;
 
   @media (min-width: $desktop-width) {
     margin: 0 0 0 20px;
@@ -205,12 +223,12 @@
   width: 35px;
   height: auto;
   padding: 5px;
-  transition: 0.6;
+  transition: filter 0.3s, scale 1s;
 }
 
 .header__burger-icon:hover {
-  transition: 0.6;
-  opacity: 0.8;
+  transition: filter 0.3s;
+  filter: drop-shadow(3px 3px rgb(255, 255, 255));
 }
 
 .header__burger-icon-telegram {
