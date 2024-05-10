@@ -296,7 +296,6 @@ input[type=number] {
     margin: 0 auto;
     border-radius: 10px;
     background: linear-gradient(92deg, #FD5F2F 0.29%, #FFB069 142.96%);
-    box-shadow: 0 0 10px #FD5F2F;
     padding: 9px 27px;
     color: $white;
     text-align: center;
@@ -305,16 +304,33 @@ input[type=number] {
     font-style: normal;
     font-weight: 700;
     line-height: 13.854px;
+    transition: box-shadow 0.5s;
 
     @media (min-width: $desktop-width) {
         width: 290px;
         font-size: 16px;
         padding: 15px 27px;
     }
+
+    &:hover {
+        box-shadow: 0 0 10px #FD5F2F;
+        transition: animation box-shadow 0.5s;
+        animation: wiggle 0.5s ease-in-out infinite;
+    }
 }
 
-.homepage__button:hover {
-    opacity: 0.8;
+@keyframes wiggle {
+    0% {
+        transform: rotate(-0.5deg);
+    }
+
+    50% {
+        transform: rotate(0.5deg);
+    }
+
+    100% {
+        transform: rotate(-0.5deg);
+    }
 }
 
 .disabled {
