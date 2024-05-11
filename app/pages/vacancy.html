@@ -1,76 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Работа сборщиком мебели</title>
-    <link rel="stylesheet" href="/vacancy.css" />
-  </head>
 
-  <body>
-    <form action="" class="form">
-      <!-- form -->
-      <img src="/app/images/src/vacancy/molot.webp" class="imgLogo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Работа сборщиком мебели</title>
+  <link rel="stylesheet" href="/vacancy.css" />
+</head>
 
-      <h1 class="form__title">Работа сборщиком мебели</h1>
-      <h3 class="form__subtitle">Расскажите о вашем опыте</h3>
+<body>
 
-      <label for="master" class="form__label">Как вас зовут</label>
-      <input
-        id="master"
-        type="text"
-        class="form__input"
-        placeholder="Укажите ваше имя"
-      />
+  <div class="articles__close">
+    <a class="articles__close-link" href="https://sborkamebelispb.ru/">
+      <p class="articles__close-btn">✖</p>
+    </a>
+  </div>
 
-      <label for="old" class="form__label">Ваш возраст</label>
-      <input
-        id="old"
-        type="text"
-        class="form__input"
-        placeholder="Укажите ваш возраст "
-      />
+  <form action="" class="form">
+    <!-- form -->
+    <img src="/app/images/src/vacancy/molot.webp" class="imgLogo" />
 
-      <label for="car" class="form__label">Наличие авто</label>
-      <select
-        id="car"
-        type="select"
-        class="form__input"
-        placeholder="Напишите ваше сообщение"
-      >
-        <option value="Да">Да</option>
-        <option value="Нет">Нет</option>
-      </select>
+    <h1 class="form__title">Работа сборщиком мебели</h1>
+    <h3 class="form__subtitle">Расскажите о вашем опыте</h3>
 
-      <label for="experience" class="form__label"
-        >Предыдущий похожий опыт работы
-      </label>
-      <input
-        id="experience"
-        type="text"
-        placeholder="Укажите сколько лет и где вы работали на похожей должности"
-        class="form__input"
-      />
+    <label for="master" class="form__label">Как вас зовут*</label>
+    <input id="master" type="text" class="form__input" placeholder="Укажите ваше имя" />
 
-      <label for="cash" class="form__label"
-        >Желаемый уровень заработной платы</label
-      >
-      <select id="cash" type="text" class="form__input">
-        <option value="40.000">40.000</option>
-        <option value="50.000">50.000</option>
-        <option value="50.000">60.000</option>
-        <option value="70.000">70.000</option>
-        <option value="80.000">80.000</option>
-        <option value="90.000">90.000</option>
-        <option value="100.000">100.000</option>
-      </select>
+    <label for="old" class="form__label">Ваш возраст*</label>
+    <input id="old" type="text" class="form__input" placeholder="Укажите ваш возраст " />
 
-      <div id="response"></div>
+    <label for="car" class="form__label">Наличие авто*</label>
+    <select id="car" type="select" class="form__input" placeholder="Напишите ваше сообщение">
+      <option value="Да">Да</option>
+      <option value="Нет">Нет</option>
+    </select>
 
-      <button id="submit" class="form__submit">Отправить на whatsApp</button>
-    </form>
-    <script src="/app/js/vacancy.js"></script>
-  </body>
+    <label for="experience" class="form__label">Предыдущий похожий опыт работы*
+    </label>
+    <input id="experience" type="text" placeholder="Укажите сколько лет и где вы работали на похожей должности"
+      class="form__input" />
+
+    <label for="cash" class="form__label">Желаемый уровень заработной платы</label>
+    <select id="cash" type="text" class="form__input">
+      <option value="40.000">40.000</option>
+      <option value="50.000">50.000</option>
+      <option value="50.000">60.000</option>
+      <option value="70.000">70.000</option>
+      <option value="80.000">80.000</option>
+      <option value="90.000">90.000</option>
+      <option value="100.000">100.000</option>
+    </select>
+
+    <div id="response"></div>
+
+    <button id="submit" class="form__submit">Отправить на whatsApp</button>
+
+  </form>
+  <script src="/app/js/vacancy.js"></script>
+</body>
+
 </html>
 
 <!-- pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" -->

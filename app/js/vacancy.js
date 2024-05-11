@@ -24,12 +24,12 @@ document.querySelector("#submit").addEventListener("click", (e) => {
 
   if (master === "" || old === "" || car === "" || experience === "") {
     response.classList.add("fail");
-    response.innerHTML = `Некоторые данные отсутствуют, ${master}`;
+    response.innerHTML = `Некоторые данные отсутствуют. ${master}`;
     return false;
   }
   response.classList.remove("fail");
   response.classList.add("send");
-  response.innerHTML = `Ваша заявка отправлена, ${master}`;
+  response.innerHTML = `Ваша заявка отправлена. ${master}`;
 
   window.open(url);
 });
