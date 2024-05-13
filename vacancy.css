@@ -109,7 +109,6 @@ p {
 }
 
 .form {
-  margin: auto;
   margin-top: 30px;
   margin-bottom: 50px;
   padding: 20px;
@@ -151,19 +150,21 @@ p {
 
 .articles__close:hover {
   transition: transform 1.5s;
-  transform: rotate(180deg);
+  background-color: #ffcc48;
 }
 
 .articles__close-link {
   text-decoration-line: none;
   color: black;
   position: absolute;
-  bottom: 7px;
+  bottom: 8px;
 }
 
 .form {
   font-family: "Blogger Sans";
   font-size: 1.2e, ;
+  padding: 20px;
+  max-width: 70vw;
 }
 
 @media (max-width: 1228px) {
@@ -179,38 +180,36 @@ p {
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1em;
-  /*border: 1px solid rgba(109, 86, 10, 0.7);*/
+}
+
+.form__subtitle {
+  margin-bottom: 10px;
 }
 
 .form__title,
 .form__subtitle,
 .form__parrafo {
   text-align: center;
-  margin-top: 0;
-}
-
-.form__title,
-.form__subtitle {
-  color: rgb(31, 31, 31);
-}
-
-.form__parrafo {
-  color: rgb(31, 31, 31);
+  margin-top: 10px;
 }
 
 .form__input,
 .form__label {
   display: block;
-  width: 100%;
 }
 
+
+
 .form__input {
+  width: 100%;
   padding: 10px;
   background: transparent;
   margin-bottom: 15px;
   border-radius: 10px;
   font-family: "Blogger Sans";
   font-size: 1.2em;
+  border: black solid 1px;
+  box-sizing: border-box
 }
 
 .form__input:focus {
