@@ -34,10 +34,16 @@ p {
   margin-top: 20px;
 }
 
-.vacancy {}
+.vacancy__close-button {
+  display: block;
+  width: fit-content;
+  position: absolute;
+  right: 60px;
+  top: 80px;
+}
 
 .vacancy__title {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 900;
   font-size: 1.5em;
 }
@@ -54,7 +60,7 @@ p {
   font-family: "Neue soviet";
   font-weight: 300;
   color: rgba(0, 10, 255, 0.66);
-  font-size: 4em;
+  font-size: 5em;
   line-height: 0.8em;
   margin-top: 20px;
 
@@ -62,20 +68,18 @@ p {
     margin-top: 40px;
     font-size: 5em;
   }
-
 }
-
 
 .vacancy__text {
   font-family: "Inter";
   font-size: 0.8em;
   line-height: 1.2em;
+  margin-bottom: 10px;
 
   @media (min-width: 710px) {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
-
 
 .vacancy__list {
   font-family: "Inter";
@@ -89,13 +93,20 @@ p {
 
 .vacancy__item {
   font-family: "Inter";
-  font-size: 1em;
+  font-size: 0.8em;
   list-style: disc;
-  line-height: 1.2em;
+  line-height: 1.1em;
+  margin-bottom: 5px;
+  font-family: Arial, sans-serif;
+  color: #333;
 
   @media (min-width: 710px) {
     font-size: 1em;
   }
+}
+
+.vacancy__item ul {
+  margin-left: 20px;
 }
 
 .vacancy__img {
@@ -162,7 +173,7 @@ p {
 
 .form {
   font-family: "Blogger Sans";
-  font-size: 1.2e, ;
+  font-size: 1.2e;
   padding: 20px;
   max-width: 70vw;
 }
@@ -198,8 +209,6 @@ p {
   display: block;
 }
 
-
-
 .form__input {
   width: 100%;
   padding: 10px;
@@ -209,7 +218,7 @@ p {
   font-family: "Blogger Sans";
   font-size: 1.2em;
   border: black solid 1px;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .form__input:focus {
