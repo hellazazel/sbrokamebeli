@@ -104,6 +104,11 @@ body {
   overflow: hidden;
   max-width: 350px;
   min-width: 350px;
+  margin-bottom: 20px;
+}
+
+.card-gold {
+  box-shadow: 0 2px 20px rgb(255, 244, 179);
 }
 
 .card-header img {
@@ -155,7 +160,6 @@ body {
   font-weight: 500;
   color: rgba(80, 80, 80, 0.452);
   text-decoration: none;
-
 }
 
 .card-body a:hover {
@@ -163,7 +167,6 @@ body {
   font-weight: 500;
   color: rgb(0, 140, 255);
   transition: 1ms;
-
 }
 
 .user {
