@@ -14,6 +14,20 @@
   src: url("/app/fonts/Bebas_Neue.ttf");
 }
 
+.list-bold {
+  font-family: "Inter";
+  font-weight: normal;
+}
+
+.list-blue {
+  font-family: "Inter";
+  font-weight: 900;
+  color: rgb(47, 179, 253);
+}
+
+.list-big {
+  font-weight: 900;
+}
 ul {
   list-style: inside;
   font-family: "Inter";
@@ -110,5 +124,5 @@ img {
 }
 
 .next-page-link {
-margin-bottom: 50px;
+  margin-bottom: 50px;
 }
