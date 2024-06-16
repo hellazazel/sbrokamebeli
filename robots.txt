@@ -1,0 +1,8 @@
+User-agent: *
+Crawl-delay: 1
+
+User-agent: *
+Disallow: /app/components/
+
+Host: https://sborkamebelispb.ru
+Sitemap: https://sborkamebelispb.ru/sitemap.xml
