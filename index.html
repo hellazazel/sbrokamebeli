@@ -98,41 +98,32 @@
           Сборка мебели и кухонных гарнитуров <span>на дому</span>
         </h1>
       </div>
-      <form action class="homepage__form">
+      <form action="/php/sendmail_1.php" method="post" enctype="multipart/form-data" class="homepage__form">
         <h2 class="homepage__subtittle">Форма обратной связи</h2>
         <div class="homepage__item">
           <label for="homepage__name" class="homepage__label">Ваше имя*</label>
-          <input type="text" id="homepage__name" class="homepage__input" name="user__name"
-            placeholder="Фамилия Имя Отчество" onkeydown="noDigits(event)" />
+          <input type="text" id="homepage__name" class="homepage__input" name="username" placeholder="Фамилия Имя Отчество" onkeydown="noDigits(event)" />
         </div>
         <div class="homepage__item">
-          <label for="homepage__tel" class="homepage__label">Номер
-            телефона*</label>
-          <input type="tel" minlength="12" maxlength="12" id="homepage__tel" class="homepage__input" name="user__tel"
-            placeholder="+7-(___)-___-__-__" onfocus="addDefaultValue(this)" onblur="removeDefaultValue(this)" />
+          <label for="homepage__tel" class="homepage__label">Номер телефона*</label>
+          <input type="tel" minlength="12" maxlength="12" id="homepage__tel" class="homepage__input" name="phone" placeholder="+7-(___)-___-__-__" onfocus="addDefaultValue(this)" onblur="removeDefaultValue(this)" />
         </div>
         <div class="homepage__item">
           <label for="homepage__question" class="homepage__label">Сообщение</label>
-          <textarea id="homepage__question" class="homepage__input homepage__textarea" name="user__question"
-            placeholder="Напишите интересующий вас вопрос"></textarea>
+          <textarea id="homepage__question" class="homepage__input homepage__textarea" name="message" placeholder="Напишите интересующий вас вопрос"></textarea>
         </div>
-        <div class="homepage__item">
+        <div class="homepage__item drag-drop-area"  ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)"  id="drag-drop-area">
           <label for="homepage__file" class="homepage__label homepage__label-file">
             <img src="app/images/src/homepage/peg.svg" alt="скрепка" class="homepage__label-image" /><br />
-            <span class="homepage__label-clue">Перетащите файл(ы) в эту
-              область</span><br />
-            <span class="homepage__label-hook">или вы можете выбрать
-              файл</span><br />
+            <span class="homepage__label-clue">Перетащите файл(ы) в эту область</span><br />
+            <span class="homepage__label-hook">или вы можете выбрать файл</span><br />
             <span class="homepage__label-button">кликнув сюда</span><br />
           </label>
-          <input type="file" id="homepage__file" class="homepage__input" name="user__file"
-            placeholder="Перетащите файл(ы) в эту область" />
+          <input type="file" id="homepage__file" class="homepage__input" name="files[]" multiple onchange="previewFiles()" />
+          <div id="file-preview"></div>
         </div>
-        <p class="homepage__promt">
-          (прикрепите схему или фото мебели в готовом виде)
-        </p>
-        <a href class="homepage__button button" type="submit">Рассчитать
-          стоимость</a>
+        <p class="homepage__promt">(прикрепите схему или фото мебели в готовом виде)</p>
+        <button type="submit" class="homepage__button button">Рассчитать стоимость</button>
       </form>
     </div>
   </main>
@@ -929,19 +920,67 @@
   <script src="app/js/script.min.js"></script>
   <script src="https://res.smartwidgets.ru/app.js" defer></script>
   <script>
-    function addDefaultValue(input) {
-      if (input.value === "") {
-        input.value = "+7";
-      }
+    function previewFiles() {
+      const preview = document.getElementById('file-preview');
+      preview.innerHTML = '';
+      const files = document.getElementById('homepage__file').files;
+      Array.from(files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const div = document.createElement('div');
+          if (file.type.startsWith('image/')) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            img.style.maxWidth = '100px';
+            div.appendChild(img);
+          } else {
+            const p = document.createElement('p');
+            p.textContent = file.name;
+            div.appendChild(p);
+          }
+          preview.appendChild(div);
+        };
+        reader.readAsDataURL(file);
+      });
     }
-    function removeDefaultValue(input) {
-      if (input.value === "+7") {
-        input.value = "";
-      }
+
+    function handleDrop(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const area = document.getElementById('drag-drop-area');
+      area.classList.remove('dragover');
+      const files = event.dataTransfer.files;
+      const input = document.getElementById('homepage__file');
+      input.files = files;
+      previewFiles();
     }
-    function noDigits(event) {
-      if ("1234567890".indexOf(event.key) != -1) event.preventDefault();
+
+    function handleDragOver(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const area = document.getElementById('drag-drop-area');
+      area.classList.add('dragover');
     }
+
+    function handleDragLeave(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const area = document.getElementById('drag-drop-area');
+      area.classList.remove('dragover');
+    }
+  function addDefaultValue(input) {
+  if (input.value === "") {
+  input.value = "+7";
+  }
+  }
+  function removeDefaultValue(input) {
+  if (input.value === "+7") {
+  input.value = "";
+  }
+  }
+  function noDigits(event) {
+  if ("1234567890".indexOf(event.key) != -1) event.preventDefault();
+  }
   </script>
   <script src="/jquery/view-source_https___code.jquery.com_jquery-3.7.1.min.js"></script>
   <script>console.log($)</script>

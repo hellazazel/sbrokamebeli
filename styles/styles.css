@@ -1449,3 +1449,12 @@ transition: 0.1s;
   left: 0;
   overflow: hidden;
 }
+.dragover {
+  border-color: #333;
+}
+#file-preview div {
+  margin: 5px;
+}
+#file-preview img {
+  max-width: 100px;
+}

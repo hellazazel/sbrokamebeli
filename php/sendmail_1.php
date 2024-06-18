@@ -12,53 +12,44 @@ try {
     $mail->isSMTP();
     $mail->Host = 'mail.hostland.ru';
     $mail->SMTPAuth = true;
-    $mail->Username = 'host1853434@sborkamebelispb.ru'; // host1853434
+    $mail->Username = 'host1853434@sborkamebelispb.ru';
     $mail->Password = 'ZpCQEhg5rk';
     $mail->Port = 587;
-  	$mail->CharSet = 'UTF-8';
+    $mail->CharSet = 'UTF-8';
 
     // Отправитель
-    $mail->setFrom('host1853434@sborkamebelispb.ru', 'host1853434@sborkamebelispb.ru');
+    $mail->setFrom('host1853434@sborkamebelispb.ru', 'Форма обратной связи');
 
     // Получатель
-    $mail->addAddress('sborkamebelispb97@yandex.ru
-    ', 'Имя получателя');
+    $mail->addAddress('sborkamebelispb97@yandex.ru', 'Имя получателя');
 
     // Тема письма
     $mail->Subject = 'Новая заявка';
 
     // Содержимое письма
-    $userName = $_POST['name'];
-    $userTel = $_POST['tel'];
+    $userName = $_POST['username'];
+    $userTel = $_POST['phone'];
     $userQuestion = $_POST['message'];
-    $file = $_FILES['F'];
-
-    // Обработка прикрепленного файла, если он есть
-    if ($_FILES['F']['error'] === UPLOAD_ERR_OK) {
-        $fileTmpPath = $_FILES['F']['tmp_name'];
-        $fileName = $_FILES['F']['name'];
-        $fileSize = $_FILES['F']['size'];
-        $fileType = $_FILES['F']['type'];
-
-        // Выполните необходимые действия с загруженным файлом, например, сохранение на диск или вложение в письмо
-
-        // Пример вложения файла в письмо
-        $mail->addAttachment($fileTmpPath, $fileName);
-    }
 
     // Форматируем содержимое письма
     $mailContent = "Имя: $userName\n" .
-                   "Номер телефона: $userTel\n" .
-                   "Вопрос: $userQuestion";
-
+        "Номер телефона: $userTel\n" .
+        "Вопрос: $userQuestion";
     $mail->Body = $mailContent;
-    
+
+    // Обработка прикрепленных файлов
+    if (!empty($_FILES['files']['name'][0])) {
+        for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
+            if ($_FILES['files']['error'][$i] === UPLOAD_ERR_OK) {
+                $mail->addAttachment($_FILES['files']['tmp_name'][$i], $_FILES['files']['name'][$i]);
+            }
+        }
+    }
+
     // Отправка письма
     $mail->send();
-
     echo "Письмо успешно отправлено!";
-    
+
 } catch (Exception $e) {
     echo "Ошибка при отправке письма: " . $mail->ErrorInfo;
 }
-?>
