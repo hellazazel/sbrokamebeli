@@ -57,7 +57,7 @@
           if (file.type.startsWith('image/')) {
             const img = document.createElement('img');
             img.src = e.target.result;
-            img.style.maxWidth = '100px';
+            img.style.maxHeight = '50px';
             div.appendChild(img);
           } else {
             const p = document.createElement('p');
