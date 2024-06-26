@@ -303,6 +303,24 @@ input[type="number"] {
   }
 }
 
+.homepage__link-wrapper {
+  width: 100%; /* Ширина родительского блока */
+  display: flex; /* Использование flexbox для центрирования */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали, если требуется */
+  margin-top: 10px;
+}
+
+.homepage__link {
+  font-family: "Roboto", sans-serif; /* Убедитесь, что шрифт подключен правильно */
+  color: rgb(208, 208, 208);
+  font-size: 9.005px;
+  text-align: center;
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+  }
+}
+
 .homepage__button {
   display: block;
   width: 200px;

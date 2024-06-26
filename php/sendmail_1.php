@@ -18,7 +18,7 @@ try {
     $mail->CharSet = 'UTF-8';
 
     // Отправитель
-    $mail->setFrom('host1853434@sborkamebelispb.ru', 'Форма обратной связи');
+    $mail->setFrom('host1853434@sborkamebelispb.ru', 'Заявка с сайта');
 
     // Получатель
     $mail->addAddress('sborkamebelisaintp@gmail.com', 'Имя получателя');
