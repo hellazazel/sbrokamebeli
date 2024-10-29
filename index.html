@@ -106,18 +106,18 @@
             placeholder="Фамилия Имя Отчество" onkeydown="noDigits(event)" />
         </div>
         <div class="homepage__item">
-          <label for="homepage__tel" class="homepage__label">Номер телефона*</label>
+          <label for="homepage__tel" class="homepage__label" required>Номер телефона* </label>
           <input type="tel" minlength="12" maxlength="12" id="homepage__tel" class="homepage__input" name="phone"
             placeholder="+7-(___)-___-__-__" onfocus="addDefaultValue(this)" onblur="removeDefaultValue(this)" />
         </div>
         <div class="homepage__item">
-          <label for="homepage__question" class="homepage__label">Сообщение</label>
+          <label for="homepage__question" class="homepage__label" required>Сообщение</label>
           <textarea id="homepage__question" class="homepage__input homepage__textarea" name="message"
             placeholder="Напишите интересующий вас вопрос"></textarea>
         </div>
         <div class="homepage__item drag-drop-area" ondrop="handleDrop(event)" ondragover="handleDragOver(event)"
           ondragleave="handleDragLeave(event)" id="drag-drop-area">
-          <label for="homepage__file" class="homepage__label homepage__label-file">
+          <label for="homepage__file" class="homepage__label homepage__label-file" required>
             <img src="app/images/src/homepage/peg.svg" alt="скрепка" class="homepage__label-image" /><br />
             <span class="homepage__label-clue">Перетащите файл(ы) в эту область</span><br />
             <span class="homepage__label-hook">или вы можете выбрать файл</span><br />
